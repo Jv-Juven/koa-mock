@@ -129,8 +129,8 @@ module.exports = function (router) {
                 "rates": {
                     "220": [{
                         "rateCode": "R001",
-                        "rateName": "限时特惠",
-                        "price": 320,
+                        "rateName|1": ["限时特惠", "预付房", "到付房", "冰点钜惠", "特价房"],
+                        "price|100-1000": 0,
                         "rateStatus": "0",
                         "details": [
                             {
