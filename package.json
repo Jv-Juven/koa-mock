@@ -4,7 +4,8 @@
     "koa-cors": "^0.0.16",
     "koa-router": "^7.2.1",
     "mime-db": "^1.30.0",
-    "mockjs": "^1.0.1-beta3"
+    "mockjs": "^1.0.1-beta3",
+    "nodemon": "^1.12.1"
   },
   "name": "mock",
   "version": "1.0.0",
