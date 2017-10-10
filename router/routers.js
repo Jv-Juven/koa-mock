@@ -125,8 +125,101 @@ module.exports = function (router) {
                         'bottomPrice|100-1000': 0,
                         'rackPrice': `@bottomPrice + ${parseInt(Math.random() * 80)}`
                     }
+                ],
+                "rates": {
+                    "220": [{
+                        "rateCode": "R001",
+                        "rateName": "限时特惠",
+                        "price": 320,
+                        "rateStatus": "0",
+                        "details": [
+                            {
+                                "day": "2017-10-01",
+                                "quota": 10,
+                                "price": 350
+                            },
+                            {
+                                "day": "2017-10-02",
+                                "quota": 10,
+                                "price": 350
+                            },
+                            {
+                                "day": "2017-10-03",
+                                "quota": 10,
+                                "price": 350
+                            }
+                        ]
+                    },
+                    {
+                        "rateCode": "R002",
+                        "rateName": "预付特惠",
+                        "price": 310,
+                        "rateStatus": "0",
+                        "details": [
+                            {
+                                "day": "2017-10-01",
+                                "quota": 10,
+                                "price": 350
+                            },
+                            {
+                                "day": "2017-10-02",
+                                "quota": 10,
+                                "price": 350
+                            },
+                            {
+                                "day": "2017-10-03",
+                                "quota": 10,
+                                "price": 350
+                            }
+                        ]
+                    }]
+                }
+            }
+        });
+    });
+    // 下单
+    router.post('/v1/order/create', function (ctx, next) {
+        ctx.body = Mock.mock({
+            "code": 0,
+            "msg": "sucess",
+            "data": ""
+        });
+    });
+    // 订单查询(需登录态)
+    router.get('/v1/user/orders', function (ctx, next) {
+        ctx.body = Mock.mock({
+            "code": 0,
+            "msg": "",
+            "data": {
+                "orders": [
+                    {
+                        "id": "201709190016",
+                        "orderState": "1",
+                        "hotelName": "xxx公寓酒店",
+                        "roomType": "商务房",
+                        "checkInDate": "2017-10-08",
+                        "checkOutDate": "2017-10-09",
+                        "paymentAmount": "198",
+                        "roomAmount": 1
+                    }
                 ]
             }
+        });
+    });
+    // 发送验证码到手机
+    router.post('/v1/veriCode/send', function (ctx, next) {
+        ctx.body =  Mock.mock({
+            "code": 0,
+            "msg": "success",
+            "data": null
+        });
+    });
+    // 手机验证码验证
+    router.post('/v1/veriCode/validate', function (ctx, next) {
+        ctx.body = Mock.mock({
+            "code": 0,
+            "msg": "success",
+            "data": {}
         });
     });
 };
