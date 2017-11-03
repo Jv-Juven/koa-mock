@@ -3,7 +3,7 @@ const app = new Koa();
 const Router = require('koa-router');
 const router = new Router();
 const cors = require('koa-cors');
-const routers = require('./routers');
+const routers = require('./wechatRouters');
 routers(router);
 app.use(cors());
 app
