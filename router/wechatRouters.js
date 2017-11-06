@@ -33,17 +33,18 @@ module.exports = function (router) {
     });
     // 搜索酒店
     router.get('/crs/dsl/hotel/search', function (ctx, next) {
+        // console.log('ctx', ctx.query);
         ctx.body = {
             "msgCode": 0,
             "message": "",
             "data": [{
                 "brandId": 1,
                 "hotelId": "H123",
-                "hotelName": "xxxx",
-                "coverUrl": "http://xxx.com/ss",
-                "cityCode": "",
+                "hotelName": "长隆欢乐度假村屋",
+                "coverUrl": "http://images.plateno.com/images/inn/173jOwoxzr/320",
+                "cityCode": "CA00252",
                 "cityName": "广州市",
-                "lowestRate": 12800
+                "bottomRate": 32900
             }]
         };
     });
@@ -56,18 +57,18 @@ module.exports = function (router) {
                 "hotelId": 1,
                 "brandId": 1,
                 "corpId": 1,
-                "hotelName": "",
-                "shortDesc": "",
-                "address": "",
-                "openingDate": "",
-                "lastFitmentDate": "",
+                "hotelName": "7天广州琶洲店",
+                "shortDesc": "这是一个简单的介绍",
+                "address": "广州市海珠区琶洲展区B区西北1.2km西片房第123号",
+                "openingDate": "2017-11-20",
+                "lastFitmentDate": "2017-12-03",
                 "starLevel": 3,
                 "hotelType": 2,
-                "tel": "",
-                "serviceTel": "",
-                "settlementCurrency": "",
-                "localCurrency": "",
-                "payMethods": "",
+                "tel": "020-86772913",
+                "serviceTel": "4006733623",
+                "settlementCurrency": "CNY",
+                "localCurrency": "CNY",
+                "payMethods": "3",
                 "extraBed": true,
                 "extraBedRate": 33.00,
                 "extraBreakfast": true,
@@ -89,11 +90,23 @@ module.exports = function (router) {
                 "googleLat": 1.22555,
                 "bookingPolicy": "",
                 "residencePolicy": "",
-                "images": [{
-                    "category": 1,
-                    "url": "",
-                    "cover": false
-                }],
+                "images": [
+                    {
+                        "category": 1,
+                        "url": "http://trip-pic1.plateno.com/images/temp/index/swiper1.jpg?version=1.1.2",
+                        "cover": true
+                    },
+                    {
+                        "category": 1,
+                        "url": "http://trip-pic1.plateno.com/images/temp/index/swiper2.jpg?version=1.1.2",
+                        "cover": true
+                    },
+                    {
+                        "category": 1,
+                        "url": "http://trip-pic1.plateno.com/images/temp/index/swiper3.jpg?version=1.1.2",
+                        "cover": true
+                    }
+                ],
                 facilities: [{
                     "facilityId": 2,
                     "category": 2,
@@ -110,20 +123,20 @@ module.exports = function (router) {
             "message": "",
             "data": [{
                 "hotelId": 1,
-                "hotelName": "",
-                "description": "",
-                "address": "",
+                "hotelName": "7天广州琶洲店",
+                "description": "7天连锁酒店（广州客村地铁站二店）位于海珠区新市头路，邻近城市新中轴广州塔，与海心沙岛（亚运开闭幕会场）及珠江新城隔江相望，步行3分钟即达“地铁轴心”客村站，乘坐地铁8号线可便捷前往琶洲国际会展中心，简洁舒适的客房里配设空调、国内长途电话、24小时热水淋浴等设施，无线网络让你工作、休闲两不误。酒店正在按照7天优品标准升级设施中，愿给客人带来更加舒适的入住体验。",
+                "address": "广州市海珠区琶洲展区A区452号",
                 "openingDate": "",
                 "lastFitmentDate": "",
                 "starLevel": 3,
                 "hotelType": 2,
-                "tel": "",
+                "tel": "020-88837664",
                 "serviceTel": "",
                 "payMethods": "",
-                "checkin": "",
-                "checkout": "",
-                "bookingPolicy": "",
-                "residencePolicy": "",
+                "checkin": "12:00",
+                "checkout": "14:00",
+                "bookingPolicy": "因酒店客房数量有限，广交会期间酒店房态（房间预订）相对紧张，为了减少noshow（未入住），保证客人的正常入住，酒店自有散客及酒店各网络合作伙伴（包括Booking.com订房网）商旅客人预订酒店客房时均需提供信用卡担保，届时客人按预订入住后担保将会自动解除，房费由客人于酒店前台支付。",
+                "residencePolicy": "客人预订日期因在广州秋交会期间，属于酒店全额担保范围，客人预订客房时也了解酒店相关订房政策及担保条款（需全额担保，且预订一经确认后不可取消及更改）,并提供了信用卡担保。",
                 facilities: [{
                     "facilityId": 2,
                     "category": 2,
@@ -160,11 +173,13 @@ module.exports = function (router) {
                         "facCode": "X",
                         "facName": ""
                     }],
-                    "images": ["http://aaaa.com/a.jpg", ""],
+                    "images": [
+                        "http://images.plateno.com/images/inn/177X38RJkh"
+                    ],
                     "rates": [{
                         "rateCode": "",
                         "date": "2017-10-17",
-                        "rateName": "xxxxxx",
+                        "rateName": "限时特惠价",
                         "roomStatus": 1, // 1 正常，2 部分满房，全部满房
                         "currencyCode": "CNY",
                         "rackRate": 180.00,
@@ -183,7 +198,9 @@ module.exports = function (router) {
                         "penaltyVal": 1, //
                         "freeCxlEndTime": "2017-10-25 12:00:00",
                         "penaltyCxlEndTime": "2017-10-25 18:00:00"
-                    }]
+                    }],
+                    "rackRate": 980,
+                    "bottomRate": 300
                 }]
             }
         };
@@ -216,7 +233,11 @@ module.exports = function (router) {
                         "facCode": "X",
                         "facName": ""
                     }],
-                    "images": ["http://aaaa.com/a.jpg", ""],
+                    "images": [
+                        'http://trip-pic1.plateno.com/images/temp/index/swiper1.jpg?version=1.1.2',
+                        'http://trip-pic1.plateno.com/images/temp/index/swiper2.jpg?version=1.1.2',
+                        'http://trip-pic1.plateno.com/images/temp/index/swiper3.jpg?version=1.1.2'
+                    ],
                     "rateDetail": {
                         "roomTypeCode": "aaa",
                         "date": "",
