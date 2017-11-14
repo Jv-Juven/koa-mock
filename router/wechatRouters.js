@@ -212,9 +212,9 @@ module.exports = function (router) {
             "message": "",
             "data": {
                 "hotelId": 1,
-                "hotelName": "xxxxx",
+                "hotelName": "广发联谊大酒店",
                 "roomType": {
-                    "roomTypeCode": "aaa",
+                    "roomTypeCode": "a89",
                     "roomTypeName": "豪华大床房",
                     "area": "20-35m²",
                     "floor": "M1-13层",
@@ -239,10 +239,10 @@ module.exports = function (router) {
                         'http://trip-pic1.plateno.com/images/temp/index/swiper3.jpg?version=1.1.2'
                     ],
                     "rateDetail": {
-                        "roomTypeCode": "aaa",
+                        "roomTypeCode": "A89",
                         "date": "",
-                        "rateCode": "",
-                        "rateName": "xxxxxx",
+                        "rateCode": "CG889",
+                        "rateName": "特惠房",
                         "roomStatus": 1, // 1 正常，2 部分满房，全部满房
                         "currencyCode": "CNY",
                         "rackRate": 180.00,
@@ -278,12 +278,12 @@ module.exports = function (router) {
             "msgCode": 0,
             "message": "",
             "data": {
-                "sn": "afdfdsffdfdsfdsfdfd"
+                "sn": "fSDknkkF=LNFOI/QNGI889NfjkKNF3"
             }
         };
     });
     // 下单接口
-    router.get('/crs/dsl/order/book', function (ctx, next) {
+    router.post('/crs/dsl/order/book', function (ctx, next) {
         ctx.body = {
             "msgCode": 0,
             "message": "",
@@ -444,6 +444,43 @@ module.exports = function (router) {
             "msgCode": 0,
             "message": "",
             "data": null
+        };
+    });
+    // 获取会员基础信息
+    router.get('/v1/member/basicInfo', function (ctx, next) {
+        ctx.body = {
+            "msgCode": 0,
+            "message": "成功",
+            "data": {
+                "avatarUrl": "http://avatarurl", //头像
+                "birthday": "2017-10-10", //生日
+                "city": "广州",
+                "country": "中国",
+                "email": "123@123.com",//邮箱
+                "gender": "男", //性别
+                "id": 1,
+                "identityNo": "438992198907048739", //身份证号
+                "level": 1, //会员等级
+                "name": "王隔壁", //真实姓名
+                "nickName": "隔壁老王", //昵称
+                "phone": "135****5678", //手机号
+                "province": "广东",
+                "status": 1// 状态 1：可用  2：锁定
+            }
+        };
+    });
+    // 获取支付参数
+    router.post('/v1/wxpay/createMpPay', function (ctx, next) {
+        ctx.body = {
+            "code": 0,
+            "msg": "success",
+            "data": {
+                "timestamp": 0,  // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
+                "nonceStr": '', // 支付签名随机串，不长于 32 位
+                "package": '',  // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=***）
+                "signType": '', // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
+                "paySign": ''   // 支付签名
+            }
         };
     });
 }
