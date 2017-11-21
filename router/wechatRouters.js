@@ -562,4 +562,28 @@ module.exports = function (router) {
             }
         };
     });
+    // 获取支付信息
+    router.get('/crs/dsl/order/payInfo', function (ctx, next) {
+        ctx.body = {
+            msgCode: 0,
+            message: '成功',
+            data: {
+                channelCode: '001',
+                orderCode: '12345645644545',
+                corpId: 1,
+                hotelName: '丽枫广东财经大学店',
+                roomTypeName: '鸳鸯双飞房',
+                bkMemberId: 12548,
+                guestNames: '张大龙,仇美娟',
+                contactPhone: '13522495478',
+                payAmount: 236.00,
+                payTaxes: 0.00,
+                bkCheckinDate: '2017-12-06',
+                bkCheckoutDate: '2017-12-07',
+                nights: 1,
+                rooms: 1,
+                paymentTimeout: false
+            }
+        };
+    });
 }
