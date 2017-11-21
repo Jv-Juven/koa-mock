@@ -254,6 +254,13 @@ module.exports = function (router) {
                         "guaranteeType": 1, // 1 无须担保(到付), 2 首晚担保(预付), 3 全额担保(预付)
                         "payType": "prepay", // prepay预付，cash到付
                         "holdTime": "12:00", // 保留时间
+                        "arriveTimes": [
+                            "2017-11-23 14:00",
+                            "2017-11-23 15:00",
+                            "2017-11-23 16:00",
+                            "2017-11-23 17:00",
+                            "2017-11-23 18:00",
+                        ], // 到店时间列表
                         "payOverdue": true, // (到付)过了保留时间是否要预付
                         "cxlType": 1, // 1 免费取消，2 限时取消，3 有偿取消，4 不可取消
                         "penaltyType": "", // 罚金类型, night房晚, perc百分比 flatRate固定值
