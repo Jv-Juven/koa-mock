@@ -254,6 +254,15 @@ module.exports = function (router) {
                         "guaranteeType": 1, // 1 无须担保(到付), 2 首晚担保(预付), 3 全额担保(预付)
                         "payType": "prepay", // prepay预付，cash到付
                         "holdTime": "12:00", // 保留时间
+                        arriveTimes: [
+                            '2017-10-25 12:00',
+                            '2017-10-25 13:00',
+                            '2017-10-25 14:00',
+                            '2017-10-25 15:00',
+                            '2017-10-25 16:00',
+                            '2017-10-25 17:00',
+                            '2017-10-25 18:00'
+                        ],
                         "payOverdue": true, // (到付)过了保留时间是否要预付
                         "cxlType": 1, // 1 免费取消，2 限时取消，3 有偿取消，4 不可取消
                         "penaltyType": "", // 罚金类型, night房晚, perc百分比 flatRate固定值
@@ -533,7 +542,7 @@ module.exports = function (router) {
                 "level": 1, //会员等级
                 "name": "王隔壁", //真实姓名
                 "nickName": "隔壁老王", //昵称
-                "phone": "135****5678", //手机号
+                "phone": "13599865678", //手机号
                 "province": "广东",
                 "status": 1// 状态 1：可用  2：锁定
             }
