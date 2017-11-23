@@ -529,7 +529,7 @@ module.exports = function (router) {
             "msgCode": 0,
             "message": "成功",
             "data": {
-                "avatarUrl": "http://avatarurl", //头像
+                "avatarUrl": "http://img3.imgtn.bdimg.com/it/u=2777008330,1289798081&fm=27&gp=0.jpg", //头像
                 "birthday": "2017-10-10", //生日
                 "city": "广州",
                 "country": "中国",
@@ -540,7 +540,7 @@ module.exports = function (router) {
                 "level": 1, //会员等级
                 "name": "王隔壁", //真实姓名
                 "nickName": "隔壁老王", //昵称
-                "phone": "135****5678", //手机号
+                "phone": "13518955678", //手机号
                 "province": "广东",
                 "status": 1// 状态 1：可用  2：锁定
             }
