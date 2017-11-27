@@ -542,11 +542,7 @@ module.exports = function (router) {
                 "level": 1, //会员等级
                 "name": "王隔壁", //真实姓名
                 "nickName": "隔壁老王", //昵称
-<<<<<<< HEAD
                 "phone": "13518955678", //手机号
-=======
-                "phone": "13599865678", //手机号
->>>>>>> b05e2c88fe856769b16103bdb7044365edc39e37
                 "province": "广东",
                 "status": 1// 状态 1：可用  2：锁定
             }
