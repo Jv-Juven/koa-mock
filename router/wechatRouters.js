@@ -148,127 +148,244 @@ module.exports = function (router) {
     });
     // 商品报价列表
     router.get('/crs/dsl/product/list', function (ctx, next) {
+        // ctx.body = {
+        //     "msgCode": 0,
+        //     "message": "",
+        //     "data": {
+        //         "hotelId": 1,
+        //         "roomTypes": [{
+        //             "roomTypeCode": "aaa",
+        //             "roomTypeName": "豪华大床房",
+        //             "area": "20-35m²",
+        //             "floor": "M1-13层",
+        //             "bedType": "大床",
+        //             "beds": 1,
+        //             "bedWidth": "1.8米",
+        //             "maxOccupancy": 2,
+        //             "extraBed": true,
+        //             "noSmoking": true,
+        //             "maxExtraBeds": 1,
+        //             "extraBedPrice": 18.00,
+        //             "windowType": "有窗",
+        //             "wlannet": "全部免费",
+        //             facilities: [{
+        //                 "facilityId": 2,
+        //                 "facCode": "X",
+        //                 "facName": ""
+        //             }],
+        //             "images": [
+        //                 "http://images.plateno.com/images/inn/177X38RJkh"
+        //             ],
+        //             "rates": [{
+        //                 "rateCode": "",
+        //                 "date": "2017-10-17",
+        //                 "rateName": "限时特惠价",
+        //                 "roomStatus": 1, // 1 正常，2 部分满房，全部满房
+        //                 "currencyCode": "CNY",
+        //                 "rackRate": 180.00,
+        //                 "sellingRate": 150.00,
+        //                 "breakfastCount": 1,
+        //                 "breakfastPrice": 38.00,
+        //                 "minAdvanceDays": 3,
+        //                 "minStayDays": 1,
+        //                 "maxStayDays": 15,
+        //                 "guaranteeType": 1, // 1 无须担保(到付), 2 首晚担保(预付), 3 全额担保(预付)
+        //                 "payType": "prepay", // prepay预付，cash到付
+        //                 "holdTime": "12:00", // 保留时间
+        //                 "payOverdue": true, // (到付)过了保留时间是否要预付
+        //                 "cxlType": 1, // 1 免费取消，2 限时取消，3 有偿取消，4 不可取消
+        //                 "penaltyType": "", // 罚金类型, night房晚, perc百分比 flatRate固定值
+        //                 "penaltyVal": 1, //
+        //                 "freeCxlEndTime": "2017-10-25 12:00:00",
+        //                 "penaltyCxlEndTime": "2017-10-25 18:00:00"
+        //             }],
+        //             "rackRate": 980,
+        //             "bottomRate": 300
+        //         }]
+        //     }
+        // };
         ctx.body = {
             "msgCode": 0,
             "message": "",
             "data": {
                 "hotelId": 1,
                 "roomTypes": [{
-                    "roomTypeCode": "aaa",
-                    "roomTypeName": "豪华大床房",
-                    "area": "20-35m²",
-                    "floor": "M1-13层",
-                    "bedType": "大床",
-                    "beds": 1,
-                    "bedWidth": "1.8米",
-                    "maxOccupancy": 2,
-                    "extraBed": true,
-                    "noSmoking": true,
-                    "maxExtraBeds": 1,
-                    "extraBedPrice": 18.00,
-                    "windowType": "有窗",
-                    "wlannet": "全部免费",
-                    facilities: [{
-                        "facilityId": 2,
-                        "facCode": "X",
-                        "facName": ""
-                    }],
-                    "images": [
-                        "http://images.plateno.com/images/inn/177X38RJkh"
-                    ],
+                    "romTypeInfo": {
+                        "roomTypeCode": "aaa",
+                        "roomTypeName": "豪华大床房",
+                        "area": "20-35m²",
+                        "floor": "M1-13层",
+                        "bedType": "大床",
+                        "beds": 1,
+                        "bedWidth": "1.8米",
+                        "maxOccupancy": 2,
+                        "extraBed": true,
+                        "noSmoking": true,
+                        "maxExtraBeds": 1,
+                        "windowType": "有窗",
+                        facilities: [{
+                            "facilityId": 2,
+                            "facCode": "X",
+                            "facName": ""
+                        }],
+                        "images": [
+                            "http://images.plateno.com/images/inn/177X38RJkh"
+                        ]
+                    },
+                    "bottomRate": 123.00,
                     "rates": [{
                         "rateCode": "",
                         "date": "2017-10-17",
-                        "rateName": "限时特惠价",
+                        "rateName": "菊花促销价",
                         "roomStatus": 1, // 1 正常，2 部分满房，全部满房
                         "currencyCode": "CNY",
-                        "rackRate": 180.00,
                         "sellingRate": 150.00,
                         "breakfastCount": 1,
                         "breakfastPrice": 38.00,
                         "minAdvanceDays": 3,
                         "minStayDays": 1,
                         "maxStayDays": 15,
-                        "guaranteeType": 1, // 1 无须担保(到付), 2 首晚担保(预付), 3 全额担保(预付)
                         "payType": "prepay", // prepay预付，cash到付
                         "holdTime": "12:00", // 保留时间
                         "payOverdue": true, // (到付)过了保留时间是否要预付
-                        "cxlType": 1, // 1 免费取消，2 限时取消，3 有偿取消，4 不可取消
-                        "penaltyType": "", // 罚金类型, night房晚, perc百分比 flatRate固定值
-                        "penaltyVal": 1, //
+                        "cxlType": 1, // 1 不可取消，2 免费取消，3 限时取消，4 有偿取消
                         "freeCxlEndTime": "2017-10-25 12:00:00",
-                        "penaltyCxlEndTime": "2017-10-25 18:00:00"
-                    }],
-                    "rackRate": 980,
-                    "bottomRate": 300
+                        "hasPenalty": true,
+                        "penaltyCxlEndTime": "2017-10-13 18:00:00",
+                        "penaltyUnit": "night",
+                        "penaltyVal": 1,
+                    }]
                 }]
             }
         };
     });
     // 商品报价详情
     router.get('/crs/dsl/product/detail', function (ctx, next) {
+        // ctx.body = {
+        //     "msgCode": 0,
+        //     "message": "",
+        //     "data": {
+        //         "hotelId": 1,
+        //         "hotelName": "广发联谊大酒店",
+        //         "roomType": {
+        //             "roomTypeCode": "a89",
+        //             "roomTypeName": "豪华大床房",
+        //             "area": "20-35m²",
+        //             "floor": "M1-13层",
+        //             "bedType": "大床",
+        //             "beds": 1,
+        //             "bedWidth": "1.8米",
+        //             "maxOccupancy": 2,
+        //             "extraBed": true,
+        //             "allowSmoking": true,
+        //             "maxExtraBeds": 1,
+        //             "extraBedPrice": 18.00,
+        //             "windowType": "有窗",
+        //             "wlannet": "全部免费",
+        //             facilities: [{
+        //                 "facilityId": 2,
+        //                 "facCode": "X",
+        //                 "facName": ""
+        //             }],
+        //             "images": [
+        //                 'http://trip-pic1.plateno.com/images/temp/index/swiper1.jpg?version=1.1.2',
+        //                 'http://trip-pic1.plateno.com/images/temp/index/swiper2.jpg?version=1.1.2',
+        //                 'http://trip-pic1.plateno.com/images/temp/index/swiper3.jpg?version=1.1.2'
+        //             ],
+        //             "rateDetail": {
+        //                 "roomTypeCode": "A89",
+        //                 "date": "",
+        //                 "rateCode": "CG889",
+        //                 "rateName": "特惠房",
+        //                 "roomStatus": 1, // 1 正常，2 部分满房，全部满房
+        //                 "currencyCode": "CNY",
+        //                 "rackRate": 180.00,
+        //                 "breakfastCount": 1,
+        //                 "breakfastPrice": 38.00,
+        //                 "minAdvanceDays": 3,
+        //                 "minStayDays": 1,
+        //                 "maxStayDays": 15,
+        //                 "guaranteeType": 1, // 1 无须担保(到付), 2 首晚担保(预付), 3 全额担保(预付)
+        //                 "payType": "prepay", // prepay预付，cash到付
+        //                 "holdTime": "12:00", // 保留时间
+        //                 arriveTimes: [
+        //                     '2017-10-25 12:00',
+        //                     '2017-10-25 13:00',
+        //                     '2017-10-25 14:00',
+        //                     '2017-10-25 15:00',
+        //                     '2017-10-25 16:00',
+        //                     '2017-10-25 17:00',
+        //                     '2017-10-25 18:00'
+        //                 ],
+        //                 "payOverdue": true, // (到付)过了保留时间是否要预付
+        //                 "cxlType": 1, // 1 免费取消，2 限时取消，3 有偿取消，4 不可取消
+        //                 "penaltyType": "", // 罚金类型, night房晚, perc百分比 flatRate固定值
+        //                 "penaltyVal": 1, //
+        //                 "freeCxlEndTime": "2017-10-25 12:00:00",
+        //                 "penaltyCxlEndTime": "2017-10-25 18:00:00",
+        //                 "dailyRates": [{
+        //                     "date": "2017-10-17",
+        //                     "rate": 150.00,
+        //                 }, {
+        //                     "date": "2017-10-18",
+        //                     "rate": 150.00,
+        //                 }]
+        //             }
+        //         }
+        //     }
+        // };
         ctx.body = {
             "msgCode": 0,
             "message": "",
             "data": {
                 "hotelId": 1,
-                "hotelName": "广发联谊大酒店",
-                "roomType": {
-                    "roomTypeCode": "a89",
-                    "roomTypeName": "豪华大床房",
-                    "area": "20-35m²",
-                    "floor": "M1-13层",
-                    "bedType": "大床",
-                    "beds": 1,
-                    "bedWidth": "1.8米",
-                    "maxOccupancy": 2,
-                    "extraBed": true,
-                    "allowSmoking": true,
-                    "maxExtraBeds": 1,
-                    "extraBedPrice": 18.00,
-                    "windowType": "有窗",
-                    "wlannet": "全部免费",
-                    facilities: [{
-                        "facilityId": 2,
-                        "facCode": "X",
-                        "facName": ""
-                    }],
-                    "images": [
-                        'http://trip-pic1.plateno.com/images/temp/index/swiper1.jpg?version=1.1.2',
-                        'http://trip-pic1.plateno.com/images/temp/index/swiper2.jpg?version=1.1.2',
-                        'http://trip-pic1.plateno.com/images/temp/index/swiper3.jpg?version=1.1.2'
-                    ],
-                    "rateDetail": {
-                        "roomTypeCode": "A89",
+                "hotelName": "7天海珠丽枫店",
+                "roomTypes": [{
+                    "roomTypeInfo": {
+                        "roomTypeCode": "aaa",
+                        "roomTypeName": "豪华大床房",
+                        "area": "20-35m²",
+                        "floor": "M1-13层",
+                        "bedType": "大床",
+                        "beds": 1,
+                        "bedWidth": "1.8米",
+                        "maxOccupancy": 2,
+                        "extraBed": true,
+                        "noSmoking": true,
+                        "maxExtraBeds": 1,
+                        "windowType": "有窗",
+                        facilities: [{
+                            "facilityId": 2,
+                            "facCode": "X",
+                            "facName": ""
+                        }],
+                        "images": [
+                            'http://trip-pic1.plateno.com/images/temp/index/swiper1.jpg?version=1.1.2',
+                            'http://trip-pic1.plateno.com/images/temp/index/swiper2.jpg?version=1.1.2',
+                            'http://trip-pic1.plateno.com/images/temp/index/swiper3.jpg?version=1.1.2'
+                        ]
+                    },
+                    "rates": [{
                         "date": "",
-                        "rateCode": "CG889",
-                        "rateName": "特惠房",
+                        "rateCode": "DC990",
+                        "rateName": "新客栈大床房",
                         "roomStatus": 1, // 1 正常，2 部分满房，全部满房
                         "currencyCode": "CNY",
-                        "rackRate": 180.00,
                         "breakfastCount": 1,
                         "breakfastPrice": 38.00,
                         "minAdvanceDays": 3,
                         "minStayDays": 1,
                         "maxStayDays": 15,
-                        "guaranteeType": 1, // 1 无须担保(到付), 2 首晚担保(预付), 3 全额担保(预付)
                         "payType": "prepay", // prepay预付，cash到付
                         "holdTime": "12:00", // 保留时间
-                        arriveTimes: [
-                            '2017-10-25 12:00',
-                            '2017-10-25 13:00',
-                            '2017-10-25 14:00',
-                            '2017-10-25 15:00',
-                            '2017-10-25 16:00',
-                            '2017-10-25 17:00',
-                            '2017-10-25 18:00'
-                        ],
+                        "arriveTimes": ["2017-10-25 12:00"],
                         "payOverdue": true, // (到付)过了保留时间是否要预付
-                        "cxlType": 1, // 1 免费取消，2 限时取消，3 有偿取消，4 不可取消
-                        "penaltyType": "", // 罚金类型, night房晚, perc百分比 flatRate固定值
-                        "penaltyVal": 1, //
+                        "cxlType": 1, // 
                         "freeCxlEndTime": "2017-10-25 12:00:00",
-                        "penaltyCxlEndTime": "2017-10-25 18:00:00",
+                        "hasPenalty": true,
+                        "penaltyCxlEndTime": "2017-10-13 18:00:00",
+                        "penaltyUnit": "night",
+                        "penaltyVal": 1,
                         "dailyRates": [{
                             "date": "2017-10-17",
                             "rate": 150.00,
@@ -276,8 +393,8 @@ module.exports = function (router) {
                             "date": "2017-10-18",
                             "rate": 150.00,
                         }]
-                    }
-                }
+                    }]
+                }],
             }
         };
     });
