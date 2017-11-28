@@ -371,7 +371,7 @@ module.exports = function (router) {
         };
     });
     // 取消订单
-    router.get('/crs/dsl/order/cancel', function (ctx, next) {
+    router.post('/crs/dsl/order/cancel', function (ctx, next) {
         ctx.body = {
             "msgCode": 0,
             "message": "",
