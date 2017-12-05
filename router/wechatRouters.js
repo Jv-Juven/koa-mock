@@ -7,9 +7,9 @@ module.exports = function (router) {
             "message": "",
             "data": {
                 "corpId": 1,
-                "corpName": "xxxx公司",
-                "logoUrl": "http://xxx.com/ss",
-                "title": "xxxx"
+                "corpName": "广州丽枫宿业有限公司",
+                "logoUrl": "http://www.gxlanyun.com/upLoad/news/month_1705/201705231254509197.jpg",
+                "title": "广州丽枫宿业有限公司"
             }
         };
     });
@@ -668,8 +668,8 @@ module.exports = function (router) {
     // 获取支付参数
     router.post('/v1/wxpay/createMpPay', function (ctx, next) {
         ctx.body = {
-            "code": 0,
-            "msg": "success",
+            "msgCode": 0,
+            "message": "success",
             "data": {
                 "timestamp": 0,  // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
                 "nonceStr": '', // 支付签名随机串，不长于 32 位
