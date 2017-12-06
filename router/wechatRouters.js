@@ -9,7 +9,8 @@ module.exports = function (router) {
                 "corpId": 1,
                 "corpName": "广州丽枫宿业有限公司",
                 "logoUrl": "http://www.gxlanyun.com/upLoad/news/month_1705/201705231254509197.jpg",
-                "title": "广州丽枫宿业有限公司"
+                "title": "广州丽枫宿业有限公司",
+                "hotelUnique": 1
             }
         };
     });
