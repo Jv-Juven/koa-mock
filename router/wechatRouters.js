@@ -114,12 +114,68 @@ module.exports = function (router) {
                         "cover": true
                     }
                 ],
-                facilities: [{
-                    "facilityId": 2,
-                    "category": 2,
-                    "facCode": "X",
-                    "facName": ""
-                }]
+                facilities: [
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0008",
+                        "facName": "电动车"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0016",
+                        "facName": "书吧"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0017",
+                        "facName": "放映厅"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0039",
+                        "facName": "货币兑换"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0066",
+                        "facName": "MORA咖啡"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0405",
+                        "facName": "投屏电视"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0074",
+                        "facName": "迎宾花茶香巾"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0075",
+                        "facName": "智能化系统"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0032",
+                        "facName": "咖啡厅"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0421",
+                        "facName": "智能门锁"
+                    }
+                ]
             }]
         };
     });
@@ -144,12 +200,68 @@ module.exports = function (router) {
                 "checkout": "14:00",
                 "bookingPolicy": "因酒店客房数量有限，广交会期间酒店房态（房间预订）相对紧张，为了减少noshow（未入住），保证客人的正常入住，酒店自有散客及酒店各网络合作伙伴（包括Booking.com订房网）商旅客人预订酒店客房时均需提供信用卡担保，届时客人按预订入住后担保将会自动解除，房费由客人于酒店前台支付。",
                 "residencePolicy": "客人预订日期因在广州秋交会期间，属于酒店全额担保范围，客人预订客房时也了解酒店相关订房政策及担保条款（需全额担保，且预订一经确认后不可取消及更改）,并提供了信用卡担保。",
-                facilities: [{
-                    "facilityId": 2,
-                    "category": 2,
-                    "facCode": "X",
-                    "facName": ""
-                }]
+                facilities: [
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0008",
+                        "facName": "电动车"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0016",
+                        "facName": "书吧"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0017",
+                        "facName": "放映厅"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0039",
+                        "facName": "货币兑换"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0066",
+                        "facName": "MORA咖啡"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0405",
+                        "facName": "投屏电视"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0074",
+                        "facName": "迎宾花茶香巾"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Ser0075",
+                        "facName": "智能化系统"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0032",
+                        "facName": "咖啡厅"
+                    },
+                    {
+                        "facilityId": 2,
+                        "category": 2,
+                        "facCode": "Fac0421",
+                        "facName": "智能门锁"
+                    }
+                ]
             }]
         };
     });
@@ -361,11 +473,68 @@ module.exports = function (router) {
                         "noSmoking": true,
                         "maxExtraBeds": 1,
                         "windowType": "有窗",
-                        facilities: [{
-                            "facilityId": 2,
-                            "facCode": "X",
-                            "facName": ""
-                        }],
+                        facilities: [
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0066",
+                                "facName": "MORA咖啡"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0074",
+                                "facName": "迎宾花茶香巾"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0075",
+                                "facName": "智能化系统"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0039",
+                                "facName": "货币兑换"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0066",
+                                "facName": "MORA咖啡"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0078",
+                                "facName": "Maxtail"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0074",
+                                "facName": "迎宾花茶香巾"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0075",
+                                "facName": "智能化系统"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0085",
+                                "facName": "免押金入住"
+                            },
+                            {
+                                "facilityId": 2,
+                                "category": 2,
+                                "facCode": "Ser0095",
+                                "facName": "亲子用品"
+                            }
+                        ],
                         "images": [
                             'http://trip-pic1.plateno.com/images/temp/index/swiper1.jpg?version=1.1.2',
                             'http://trip-pic1.plateno.com/images/temp/index/swiper2.jpg?version=1.1.2',
@@ -490,7 +659,12 @@ module.exports = function (router) {
                     "amount": 3.22,
                     "time": 3335552,
                     "payChannel": "",
-                }
+                },
+                "showStatusTxt": "已完成",
+                "showStatus": 5,
+                "deletable": true,
+                "cancelable": false,
+                "payable": false
             }
         };
     });
@@ -562,7 +736,12 @@ module.exports = function (router) {
                     "penaltyCxlEndTime": "2017-10-13 18:00:00",
                     "holdTime": "",
                     "paymentTimeout": true,
-                    "createdTime": 12345
+                    "createdTime": 12345,
+                    "showStatusTxt": "预订成功",
+                    "showStatus": 1,
+                    "deletable": false,
+                    "cancelable": true,
+                    "payable": false
                 }, {
                     "channelCode": "",
                     "corpId": 1,
@@ -599,7 +778,12 @@ module.exports = function (router) {
                     "penaltyCxlEndTime": "2017-10-13 18:00:00",
                     "holdTime": "",
                     "paymentTimeout": true,
-                    "createdTime": 12345
+                    "createdTime": 12345,
+                    "showStatusTxt": "已取消",
+                    "showStatus": 6,
+                    "deletable": true,
+                    "cancelable": false,
+                    "payable": false
                 }, {
                     "channelCode": "",
                     "corpId": 1,
@@ -636,7 +820,138 @@ module.exports = function (router) {
                     "penaltyCxlEndTime": "2017-10-13 18:00:00",
                     "holdTime": "",
                     "paymentTimeout": true,
-                    "createdTime": 12345
+                    "createdTime": 12345,
+                    "showStatusTxt": "退款中",
+                    "showStatus": 7,
+                    "deletable": false,
+                    "cancelable": false,
+                    "payable": false
+                }, {
+                    "channelCode": "",
+                    "corpId": 1,
+                    "brandId": 1,
+                    "hotelId": 1,
+                    "hotelName": "",
+                    "roomTypeName": "",
+                    "roomTypeCode": "",
+                    "timeZone": "",
+                    "rateCode": "",
+                    "bkMemberId": 1,
+                    "guaranteeCode": "",
+                    "cxlCode": "",
+                    "status": "",
+                    "arriveTime": "",
+                    "guaranteeType": 1,
+                    "payType": "",
+                    "payStatus": "",
+                    "totalAmount": 1,
+                    "discountAmount": 1,
+                    "payAmount": 1,
+                    "payTaxes": 1,
+                    "refundedAmount": 1,
+                    "penaltyAmount": 1,
+                    "currencyCode": "",
+                    "bkCheckinDate": "2017-10-11",
+                    "bkCheckoutDate": "2017-10-13",
+                    "actualCheckoutDate": "2017-10-13",
+                    "nights": 1,
+                    "guests": 1,
+                    "rooms": 1,
+                    "canCancel": true,
+                    "freeCxlEndTime": "2017-10-13 12:00:00",
+                    "penaltyCxlEndTime": "2017-10-13 18:00:00",
+                    "holdTime": "",
+                    "paymentTimeout": true,
+                    "createdTime": 12345,
+                    "showStatusTxt": "已退款",
+                    "showStatus": 8,
+                    "deletable": true,
+                    "cancelable": false,
+                    "payable": false
+                }, {
+                    "channelCode": "",
+                    "corpId": 1,
+                    "brandId": 1,
+                    "hotelId": 1,
+                    "hotelName": "",
+                    "roomTypeName": "",
+                    "roomTypeCode": "",
+                    "timeZone": "",
+                    "rateCode": "",
+                    "bkMemberId": 1,
+                    "guaranteeCode": "",
+                    "cxlCode": "",
+                    "status": "",
+                    "arriveTime": "",
+                    "guaranteeType": 1,
+                    "payType": "",
+                    "payStatus": "",
+                    "totalAmount": 1,
+                    "discountAmount": 1,
+                    "payAmount": 1,
+                    "payTaxes": 1,
+                    "refundedAmount": 1,
+                    "penaltyAmount": 1,
+                    "currencyCode": "",
+                    "bkCheckinDate": "2017-10-11",
+                    "bkCheckoutDate": "2017-10-13",
+                    "actualCheckoutDate": "2017-10-13",
+                    "nights": 1,
+                    "guests": 1,
+                    "rooms": 1,
+                    "canCancel": true,
+                    "freeCxlEndTime": "2017-10-13 12:00:00",
+                    "penaltyCxlEndTime": "2017-10-13 18:00:00",
+                    "holdTime": "",
+                    "paymentTimeout": true,
+                    "createdTime": 12345,
+                    "showStatusTxt": "待付款",
+                    "showStatus": 0,
+                    "deletable": false,
+                    "cancelable": true,
+                    "payable": true
+                }, {
+                    "channelCode": "",
+                    "corpId": 1,
+                    "brandId": 1,
+                    "hotelId": 1,
+                    "hotelName": "",
+                    "roomTypeName": "",
+                    "roomTypeCode": "",
+                    "timeZone": "",
+                    "rateCode": "",
+                    "bkMemberId": 1,
+                    "guaranteeCode": "",
+                    "cxlCode": "",
+                    "status": "",
+                    "arriveTime": "",
+                    "guaranteeType": 1,
+                    "payType": "",
+                    "payStatus": "",
+                    "totalAmount": 1,
+                    "discountAmount": 1,
+                    "payAmount": 1,
+                    "payTaxes": 1,
+                    "refundedAmount": 1,
+                    "penaltyAmount": 1,
+                    "currencyCode": "",
+                    "bkCheckinDate": "2017-10-11",
+                    "bkCheckoutDate": "2017-10-13",
+                    "actualCheckoutDate": "2017-10-13",
+                    "nights": 1,
+                    "guests": 1,
+                    "rooms": 1,
+                    "canCancel": true,
+                    "freeCxlEndTime": "2017-10-13 12:00:00",
+                    "penaltyCxlEndTime": "2017-10-13 18:00:00",
+                    "holdTime": "",
+                    "paymentTimeout": true,
+                    "createdTime": 12345,
+                    "showStatusTxt": "已完成",
+                    "showStatus": 8,
+                    "deletable": true,
+                    "cancelable": false,
+                    "payable": false
                 }
             ]
         };
@@ -673,7 +988,7 @@ module.exports = function (router) {
         };
     });
     // 获取支付参数
-    router.post('/v1/wxpay/createMpPay', function (ctx, next) {
+    router.post('/crs/internal/pay/getPayParams', function (ctx, next) {
         ctx.body = {
             "msgCode": 0,
             "message": "success",
