@@ -1,7 +1,7 @@
 const Mock = require('mockjs');
 module.exports = function (router) {
     // 首页
-    router.get('/crs/dsl/homePage', function (ctx, next) {
+    router.get('/crs/dsl/corp/homePage', function (ctx, next) {
         ctx.body = {
             "msgCode": 0,
             "message": "",
